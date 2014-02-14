@@ -1,10 +1,10 @@
 'use strict'
 
 function repeat(operation, num) {
-  // SOLUTION GOES HERE
-  for (var index = 0; index < num; ++index) {
-  	operation();
-  }
+  if (num <= 0) return;
+  operation();
+  repeat(operation,--num);
+ 
 }
 
 module.exports = repeat
