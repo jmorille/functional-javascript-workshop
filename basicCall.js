@@ -5,8 +5,9 @@
 function duckCount() {
     // SOLUTION GOES HERE
     var args = Array.prototype.slice.call(arguments);
-    console.log("args", args);
-    //  Object.prototype.hasOwnProperty.call(object, 'quack')
+   return args.filter(function(item) {
+         return Object.prototype.hasOwnProperty.call(item, 'quack');
+    }).length;
 }
 
 module.exports = duckCount
