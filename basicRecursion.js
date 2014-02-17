@@ -1,9 +1,9 @@
 
 'use strict'
 
- 
-function reduce(arr, fn, initial) { 
-  // SOLUTION GOES HERE 
-} 
- 
-module.exports = reduce 
+
+function duckCount() {
+    // SOLUTION GOES HERE
+}
+
+module.exports = duckCount

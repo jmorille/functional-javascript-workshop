@@ -1,0 +1,35 @@
+# Mac files
+.DS_Store
+  
+# files for the dex VM
+*.dex
+
+# generated files
+bin/
+gen/
+target
+build
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+.classpath
+.project
+.settings
+.checkstyle
+
+# IntelJ project files
+gen-external-apklibs
+.idea
+*.iml
+out
+*.log
+
+# Other
+.gradle
+/gradle
+lint.xml
+.cache
+classes
+
