@@ -17,7 +17,7 @@ function loadUsers(userIds, load, done) {
             --expectedCount;
       //     console.log('read missing',  expectedCount , ' ==> users', users);
         });
-        return {'index': index, 'userId': userId};
+      //  return {'index': index, 'userId': userId};
     });
 
    // while ( expectedCount >0) {
