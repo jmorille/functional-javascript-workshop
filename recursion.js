@@ -17,10 +17,16 @@ function getDependencies(tree) {
         Object.keys(node).forEach(function(key) {
             var depName =  key + '@' + node[key]['version'];
             result.push(depName);
-            result = result.concat(  getDependencies(node[key]) );
+            var subDeps =  getDependencies(node[key]); 
+            subDeps = subDeps.filter(function(item) {
+                var isFind = result.some(function(check) {
+                    return (check === item);
+                });
+                return !isFind;
+            });
+            result = result.concat( subDeps );
         });
     }
-    // TODO dedoublon
     // sort result
     var sorted = result.sort(function(a, b) {
         return a.localeCompare(b);
