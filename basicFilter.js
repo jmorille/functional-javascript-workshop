@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 
 
 module.exports = function getShortMessages(messages) {

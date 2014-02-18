@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 
 function countWords(inputWords) { 
   // SOLUTION GOES HERE 

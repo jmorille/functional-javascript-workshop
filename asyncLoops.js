@@ -1,13 +1,19 @@
 
 
-'use strict'
+'use strict';
 
 
 function loadUsers(userIds, load, done) {
-    var users = [];
-    for (var i = 0; i < userIds.length; i++) {
-        users.push(load(userIds[i]));
-    }
+
+    var users = userIds.map(function(userId) {
+        var userLoaded = {};
+        load(userId, function(user) {
+            console.log('user', user);
+          //  userLoaded = user;
+        });
+        return userLoaded;
+    });
+
     return users
 }
 

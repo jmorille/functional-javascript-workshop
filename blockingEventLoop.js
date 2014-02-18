@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 
 function repeat(operation, num, begin) {
     // modify this so it can be interrupted
