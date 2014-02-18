@@ -20,6 +20,7 @@ function getDependencies(tree) {
             result = result.concat(  getDependencies(node[key]) );
         });
     }
+    // TODO dedoublon
     // sort result
     var sorted = result.sort(function(a, b) {
         return a.localeCompare(b);
