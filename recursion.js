@@ -17,7 +17,7 @@ function getDependencies(tree) {
         Object.keys(node).forEach(function(key) {
             var depName =  key + '@' + node[key]['version'];
             result.push(depName);
-            var subDeps =  getDependencies(node[key]); 
+            var subDeps =  getDependencies(node[key]);
             subDeps = subDeps.filter(function(item) {
                 var isFind = result.some(function(check) {
                     return (check === item);
