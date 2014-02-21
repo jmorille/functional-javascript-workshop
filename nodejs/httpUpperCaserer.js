@@ -18,9 +18,6 @@ var server = http.createServer(function (req, response) {
     if (req.method != 'POST')
         return res.end('send me a POST\n')
 
-
-    // request handling logic...
-
     req.pipe(upper).pipe(response);
 
 })
