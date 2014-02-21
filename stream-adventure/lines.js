@@ -2,10 +2,15 @@ var through = require('through');
 var split = require('split');
 
 
-var upper = through(function write (buf) {
-    this.queue( buf.toString().toLocaleUpperCase());
-    this.queue('\n');
-    this.queue( buf.toString().toLocaleLowerCase());
+var count = 0;
+
+var upper = through(function write(buf) {
+    var line = buf.toString();
+    if (++count % 2 === 0) {
+        this.queue(line.toLocaleUpperCase());
+    } else {
+        this.queue(line.toLocaleLowerCase());
+    }
     this.queue('\n');
 });
 
